@@ -24,7 +24,7 @@ exit
 ```
 Verify the webpage in the browser
 copy the `public IP` of the Docker Host VM in the browser with `Host Port`
-* <Public IP>:<Host Port>
+* `<Public IP>`:`<Host Port>`
 * http://54.193.64.107:8080/
 ```
 docker ps -a
