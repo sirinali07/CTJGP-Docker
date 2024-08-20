@@ -40,7 +40,7 @@ docker ps
 ```
 Now create another container in interactive mode
 ```
-docker run -it ct2 ubuntu
+docker run -it --name ct2 ubuntu
 ```
 ```
 exit
