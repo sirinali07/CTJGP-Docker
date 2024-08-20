@@ -16,9 +16,16 @@ docker exec -it < replace container id/name > /bin/bash
 ```
 modify the webpage and exit from the container
 ```
-exit
+echo "Hello, This is Port Mapping testing" > /usr/local/apache2/htdocs/index.html
 ```
 
+```
+exit
+```
+Verify the webpage in the browser
+copy the `public IP` of the Docker Host VM in the browser with `Host Port`
+* <Public IP>:<Host Port>
+* http://54.193.64.107:8080/
 ```
 docker ps -a
 ```
