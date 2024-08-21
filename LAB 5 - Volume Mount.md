@@ -1,16 +1,7 @@
 ## Volume Mount in Docker
 ### Checking Volumes in Docker Area
 ```
-cd /var/lib/docker
-```
-```
-pwd
-```
-```
-ls
-```
-```
-cd volumes
+sudo ls -l  /var/lib/docker/volumes/
 ```
 
 ### Task 1: Creating a new docker volume and inspecting containers
@@ -24,6 +15,9 @@ docker volume ls
 docker volume inspect ct-volume1
 ```
 
+```
+sudo ls -l  /var/lib/docker/volumes/
+```
 ### Task 2: Launching a Nginx container mapped to a specific docker volume and verification
 ```
 docker run -d -p 80:80 --name=nginx-container --mount src=ct-volume1,dst=/usr/share/nginx/html nginx
