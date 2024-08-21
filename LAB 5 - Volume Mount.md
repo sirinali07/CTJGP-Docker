@@ -29,16 +29,13 @@ docker ps
 docker container inspect nginx-container
 ```
 ```
-ls /var/lib/docker/volumes/ct-volume1/_data/ 
+sudo ls /var/lib/docker/volumes/ct-volume1/_data/ 
 ```
+sudo touch f1 f2 f3 /var/lib/docker/volumes/ct-volume1/_data/ 
 ```
-cd /var/lib/docker/volumes/ct-volume1/_data/ 
+
 ```
-```
-touch f1 f2 f3
-```
-```
-vi /var/lib/docker/volumes/ct-volume1/_data/index.html
+sudo vi /var/lib/docker/volumes/ct-volume1/_data/index.html
 ```
 
 ### Task 3: Deleting container and attaching the volume to another container
