@@ -32,7 +32,7 @@ docker container inspect nginx-container
 sudo ls /var/lib/docker/volumes/ct-volume1/_data/ 
 ```
 ```
-sudo touch f1 f2 f3 /var/lib/docker/volumes/ct-volume1/_data/ 
+sudo touch  /var/lib/docker/volumes/ct-volume1/_data/{f1,f2,f3}
 ```
 
 ```
