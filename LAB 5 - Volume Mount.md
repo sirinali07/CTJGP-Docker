@@ -38,7 +38,9 @@ sudo touch  /var/lib/docker/volumes/ct-volume1/_data/{f1,f2,f3}
 ```
 sudo vi /var/lib/docker/volumes/ct-volume1/_data/index.html
 ```
-
+```
+sudo ls -l  /var/lib/docker/volumes/
+```
 ### Task 3: Deleting container and attaching the volume to another container
 
 ```
