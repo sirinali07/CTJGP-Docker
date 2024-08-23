@@ -220,7 +220,7 @@ docker inspect host
 
 ### Task 6: Launch a container to none network 
 ```
-docker run -it --network none --name=ct11 nginx
+docker run -d --network none --name=ct12 centos bash
 ```
 Also to check the network connection to the outside world we can run the below commands
 ```
