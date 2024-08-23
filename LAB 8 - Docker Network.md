@@ -133,30 +133,11 @@ ping -c 5 ct5
 ```
 Press Ctrl+P+Q, to switch back to Host
 ```
-docker network connect bridge ct3
+docker network connect ct-bridge-1 ct5
 ```
 ```
 docker network inspect the bridge
 ```
-Also to check the network connection to the outside world we can run the below commands
-```
-apt update
-```
-Download the ping utility if not already available
-```
-apt install inetutils-ping
-```
-```
-ping 8.8.8.8
-```
-Download the curl utility if not already available
-```
-apt install curl
-```
-```
-curl https://8.8.8.8
-```
-Also if you check the default port 80, the container would not be accessible since we have not published it
 
 
 ### Task 5: Launch a container to host network
