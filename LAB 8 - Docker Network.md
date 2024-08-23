@@ -178,55 +178,22 @@ docker network inspect host
 docker run -d --network host --name=ct8 httpd
 ```
 ```
-docker run -d --network host --name=ct9 nginx
-```
-```
 docker ps -a
 ```
-```
-docker stop ct7
-```
-```
-docker ps -a
-```
-```
-docker run -d --network host --name=ct10 httpd
-```
-```
-docker ps -a
-```
-```
-docker inspect host
-```
+
 
 ### Task 6: Launch a container to none network 
 ```
-docker run -d --network none --name=ct12 centos bash
+docker run -it --network none --name=ct11 centos bash
 ```
-Also to check the network connection to the outside world we can run the below commands
 ```
-apt update
-```
-Download the ping utility if not already available
-```
-apt install inetutils-ping
+ip addr
 ```
 ```
 ping 8.8.8.8
 ```
-Download the curl utility if not already available
-```
-apt install curl
-```
-```
-curl https://8.8.8.8
-```
-Also if you check the default port 80, the container would not be accessible.
-
 Press Ctrl+P+Q, to switch back to Host
 ```
 docker inspect none
 ```
-```
-docker network connect bridge ct11
-```
+
