@@ -194,6 +194,6 @@ ping 8.8.8.8
 ```
 Press Ctrl+P+Q, to switch back to Host
 ```
-docker inspect none
+docker network inspect none
 ```
 
