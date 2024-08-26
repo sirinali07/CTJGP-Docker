@@ -29,13 +29,13 @@ CTRL+P+Q
 docker image ls
 ```
 ```
-docker commit ct1 ubuntu:mehar
+docker commit ct1 ubuntu:version1
 ```
 ```
 docker image ls
 ```
 ```
-docker run -it --name ct2 ubuntu:mehar
+docker run -it --name ct2 ubuntu:version1
 ```
 ```
 curl
@@ -51,7 +51,7 @@ CTRL+P+Q
 docker history ubuntu:latest
 ```
 ```
-docker history ubuntu:mehar
+docker history ubuntu:version1
 ```
 
 
@@ -77,7 +77,7 @@ docker build -t ubuntu:Dockerfile1 .
 docker image ls
 ```
 ```
-docker run -it --name ct3 ubuntu:Dockerfile
+docker run -it --name ct3 ubuntu:Dockerfile1
 ```
 
 ### Task 3: Building a Dockerfile to setup an Ubuntu container with WordPress application
