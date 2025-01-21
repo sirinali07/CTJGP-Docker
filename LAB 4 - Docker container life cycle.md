@@ -86,9 +86,9 @@ docker logs < container id/name >
 ```
 Monitor real-time resource usage for running Docker containers
 
-docker stats         # Shows usage statistics for only running containers
+* docker stats         # Shows usage statistics for only running containers
 
-docker stats -a      # Shows usage for all containers
+* docker stats -a      # Shows usage for all containers
 ```
 docker stats < container id/name > 
 ```
