@@ -1,19 +1,16 @@
 ## Docker container life cycle (Self Excercise)
 
-### Task 1: Docker Lifecycle 
-Pull Docker Image
+### Task 1: Pull a Docker Image 
+Pull the official httpd (Apache HTTP Server) Docker image
 ```
 docker pull httpd
 ```
-List all images available in Local Repo
+Verify that the image is downloaded
 ```
 docker image ls
 ```
-Check the history of the image
-```
-docker image history httpd
-```
-Create container
+### Task 2: Create and Manage Containers
+Create a container from the downloaded image
 ```
 docker container create httpd
 ```
@@ -38,10 +35,12 @@ docker container ls -a
 ```
 docker container start < container id/Name >
 ```
+### Task 3 : Pause and Unpause Containers
 Pause the container
 ```
 docker container pause < container id/Name >
 ```
+Verify the paused state
 ```
 docker container ls -a
 ```
@@ -49,47 +48,38 @@ Unpause the container
 ```
 docker container unpause < container id/Name >
 ```
+Verify the unpaused state
 ```
 docker container ls -a
 ```
+### Task 4: Access the Container and Modify Its Contents
+Access the container's bash shell
 ```
 docker exec -it < container id/name > /bin/bash
 ```
+Navigate to the **htdocs** directory ( `Note:` if using **httpd** image, use htdocs; if using **nginx**, navigate to /usr/share/nginx/html):
 ```
 cd htdocs
 ```
+Update the package list and install wget
 ```
 apt update
 ```
 ```
 apt install wget -y
 ```
+Replace the default index.html file
 ```
 rm index.html
 ```
 ```
 wget https://s3.ap-south-1.amazonaws.com/files.cloudthat.training/devops/docker-essentials/index.html
 ```
+Exit the container
 ```
 exit
 ```
-Save the container as an image 
-```
-docker commit < replace container id/name > myhttpd:version
-```
-```
-docker image ls
-```
-Create a new container with the newly created image
-```
-docker run -d -p 8080:80 myhttpd:version
-```
-```
-curl < public IP>:8080  #Public IP of your host machine
-```
-```
-docker container ls
-```
+### Task 5: Monitor Docker Container Resource Usage
 Check the logs of the container
 ```
 docker logs < container id/name >
@@ -102,9 +92,12 @@ docker stats -a      # Shows usage for all containers
 ```
 docker stats < container id/name > 
 ```
+### Task 6: Clean Up Resources
+
 ```
 docker container ls
 ```
+Stop a running container
 ```
 docker stop < replace container id/name >
 ```
@@ -112,10 +105,11 @@ Remove a stopped container
 ```
 docker container rm < replace container id/name > 
 ```
-Remove a running container 
+Remove a running container forcefully
 ```
 docker container rm < replace container id/name > -f
 ```
+Remove unused images
 ```
 docker image ls
 ```
@@ -125,6 +119,4 @@ docker image rm < replace image id/name > < replace image id/name >
 ```
 docker image ls
 ```
-```
-docker image ls -a
-```
+
