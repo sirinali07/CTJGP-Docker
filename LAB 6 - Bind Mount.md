@@ -8,7 +8,7 @@ mkdir /home/ubuntu/share
 echo 'Hello From Docker Host' > /home/ubuntu/share/index.html
 ```
 ```
-docker run -it --name container1 -p 80:80 -v /home/ubuntu/share:/var/www/html ubuntu:18.04 /bin/bash
+docker run -it --name container1 -p 8080:80 -v /home/ubuntu/share:/var/www/html ubuntu:18.04 /bin/bash
 ```
 ```
 apt-get update -y && apt-get install apache2 -y
