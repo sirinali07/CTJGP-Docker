@@ -34,7 +34,7 @@ docker inspect container1
 ```
 Check for keyword `Mounts`
 ```
-docker run -it --name container2 -v /home/ubuntu/share:/var/www/html ubuntu:18.04
+docker run -it --name container2 -v /home/ubuntu/share:/var/www/html ubuntu:18.04 bash
 ```
 ```
 echo 'Hello From Container2' > /var/www/html/index.html 
@@ -54,7 +54,7 @@ cat /home/ubuntu/share/index.html
 
 ### Task 2: Create a bind mount with --mount option and verify it
 ```
-docker run -d -it --name container3 --mount type=bind,source=/home/ubuntu/share/,target=/app nginx:latest
+docker run -d --name container3 --mount type=bind,source=/home/ubuntu/share/,target=/app nginx:latest
 ```
 ```
 docker inspect container3
