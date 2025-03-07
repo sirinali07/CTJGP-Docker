@@ -133,10 +133,10 @@ ping -c 5 ct5
 ```
 Press Ctrl+P+Q, to switch back to Host
 ```
-docker network connect ct-bridge-1 ct5
+docker network connect ct-bridge1 ct5
 ```
 ```
-docker network inspect the bridge
+docker network inspect ct-bridge1
 ```
 
 
