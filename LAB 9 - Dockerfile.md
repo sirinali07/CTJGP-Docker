@@ -143,4 +143,5 @@ apt update && apt install iputils-ping -y
 ```
 ping -c 5 mysql
 ```
+Press Crtl+P+Q to switch the terminal to Docker Host.
 
