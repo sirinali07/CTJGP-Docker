@@ -184,7 +184,7 @@ docker ps -a
 
 ### Task 6: Launch a container to none network 
 ```
-docker run -it --network none --name=ct11 centos bash
+docker run -it --network none --name=ct11 centos:8 bash
 ```
 ```
 ip addr
