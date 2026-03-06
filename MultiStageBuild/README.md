@@ -58,6 +58,7 @@ app.get('/liveness', (req, res) => res.send('Live !!'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 ```
 save the file using `ESCAPE + :wq!`
+
 ---
 
 # Step 3: Create `package.json`
@@ -86,6 +87,7 @@ Add the given content, by pressing `INSERT`
 }
 ```
 save the file using `ESCAPE + :wq!`
+
 ---
 
 # Step 4: Create `Dockerfile`
@@ -129,6 +131,7 @@ EXPOSE 8080
 CMD ["node", "index.js"]
 ```
 save the file using `ESCAPE + :wq!`
+
 ---
 
 # Step 5: Build Docker Image
@@ -136,7 +139,7 @@ save the file using `ESCAPE + :wq!`
 Build the Docker image.
 
 ```bash
-docker build -t node-docker-lab .
+docker build -t my-nodejs:v1 .
 ```
 
 ---
@@ -146,7 +149,7 @@ docker build -t node-docker-lab .
 Run the container and expose port **8080**.
 
 ```bash
-docker run -d -p 8080:8080 --name node-app node-docker-lab
+docker run -d -p 8080:8080 --name node-app my-nodejs:v1
 ```
 
 ---
