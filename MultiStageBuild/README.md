@@ -141,6 +141,10 @@ Build the Docker image.
 ```bash
 docker build -t my-nodejs:v1 .
 ```
+Verify image creation:
+```
+docker image ls
+```
 
 ---
 
@@ -150,6 +154,11 @@ Run the container and expose port **8080**.
 
 ```bash
 docker run -d -p 8080:8080 --name node-app my-nodejs:v1
+```
+Check running containers:
+
+```
+docker ps
 ```
 
 ---
